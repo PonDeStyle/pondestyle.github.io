@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+    <meta charset="utf-8">
+    <title>Components - PonDeStyle</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="canonical" href="http://pondestyle.github.io/ja/docs/components.html">
+    <link rel="stylesheet" href="/dist/style.css">
+    <link rel="icon" href="/dist/logo.png">
+    <meta name="description" content="A lightweight CSS Framework">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Components">
+    <meta property="og:url" content="http://pondestyle.github.io/ja/docs/components.html">
+    <meta property="og:site_name" content="PonDeStyle">
+    <meta property="og:description" content="A lightweight CSS Framework">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+</head>
+    <body class="docs">
+    <script src="https://use.typekit.net/lak3cis.js"></script>
+    <script>try{Typekit.load({ async: true });}catch(e){}</script>
+    <header class="header">
+   <div class="C container section section--only_beside section--only_pc">
+       <div class="header__left">
+           <div class="header__logo header__logo--colored">
+               <a href="/ja/">PonDeStyle</a>
+           </div>
+       </div>
+       <div class="header__right">
+           <nav class="global-nav hide-only-mobile">
+               <a href="/ja/docs/" class="global-nav__link">Document</a>
+               <a href="https://github.com/PonDeStyle/PonDeStyle" class="global-nav__link">GitHub</a>
+           </nav>
+       </div>
+   </div>
+</header>
+    <div class="hero hero--small hero--gray">
+    <div class="container">
+        <h1 class="section">Document</h1>
+    </div>
+</div>
+
+<main class="container docs">
+   <div class="C bezel">
+       <aside class="c c--fixed docs__sidebar">
+           <div class="section">
+               <nav class="vertical-menu docsmenu">
+                   <h1 class="h5 vertical-menu__title">はじめに</h1>
+                   <ul class="vertival-menu__list">
+                       <li class="vertical-menu__item"><a href="/ja/docs">はじめに</a></li>
+                       <li class="vertical-menu__item"><a href="browsers.html">サポートブラウザー</a></li>
+                       <li class="vertical-menu__item"><a href="quickstart.html">ダウンロード &amp; 導入</a></li>
+                   </ul>
+                   <h1 class="h5 vertical-menu__title">ドキュメント</h1>
+                   <ul class="vertival-menu__list">
+                       <li class="vertical-menu__item"><a href="columns.html">Columns</a></li>
+                       <li class="vertical-menu__item"><a href="languages.html">Languages</a></li>
+                       <li class="vertical-menu__item"><a href="forms.html">Form</a></li>
+                       <li class="vertical-menu__item"><a href="typography.html">Typography</a></li>
+                       <li class="vertical-menu__item"><a href="components.html">Components</a></li>
+                       <li class="vertical-menu__item"><a href="variables.html">カスタムプロパティ</a></li>
+                       <li class="vertical-menu__item"><a href="apply-rule.html">Applyルール</a></li>
+                   </ul>
+               </nav>
+           </div>
+       </aside>
+       <div class="c docs__article">
+           <article class="section">
+    <h1>Components</h1>
+    <p>コンポーネントに関する説明。</p>
+    <section>
+        <h1 class="h2">Alert</h1>
+        <div class="example">
+            <div class="alert">
+                <p class="alert__message">This is alert.</p>
+                <button class="alert__button"></button>
+            </div>
+            <div class="alert alert--red">
+                <p class="alert__message"><strong>Warning:</strong> This is alert.</p>
+            </div>
+        </div>
+        <pre><code class="html">&lt;div class=&quot;alert&quot;&gt;
+    &lt;p class=&quot;alert__message&quot;&gt;This is alert.&lt;&#x2F;p&gt;
+    &lt;button class=&quot;alert__button&quot;&gt;&lt;&#x2F;button&gt;
+&lt;&#x2F;div&gt;
+
+&lt;div class=&quot;alert alert--red&quot;&gt;
+    &lt;p class=&quot;alert__message&quot;&gt;&lt;strong&gt;Warning:&lt;&#x2F;strong&gt; This is alert.&lt;&#x2F;p&gt;
+&lt;&#x2F;div&gt;</code></pre>
+    </section>
+    <section>
+        <h1 class="h2">Message</h1>
+        <div class="example">
+            <p class="message">This is message.</p>
+            <p class="message message--green">This is message.</p>
+        </div>
+        <pre><code class="html">&lt;p class=&quot;message&quot;&gt;This is message.&lt;&#x2F;p&gt;
+&lt;p class=&quot;message message--green&quot;&gt;This is message.&lt;&#x2F;p&gt;</code></pre>
+    </section>
+    <section>
+        <h1 class="h2">Horizontal Menu</h1>
+        <div class="example">
+            <nav class="horizontal-menu">
+                <ul class="horizontal-menu__list horizontal-menu__list--left">
+                    <li class="horizontal-menu__item"><a href="#">Item</a></li>
+                    <li class="horizontal-menu__item"><a href="#">Item</a></li>
+                    <li class="horizontal-menu__item horizontal-menu__item--current"><a href="#">Item</a></li>
+                    <li class="horizontal-menu__item"><a href="#">Item</a></li>
+                </ul>
+            </nav>
+        </div>
+        <pre><code class="html">&lt;nav class=&quot;horizontal-menu&quot;&gt;
+    &lt;ul class=&quot;horizontal-menu__list horizontal-menu__list--left&quot;&gt;
+        &lt;li class=&quot;horizontal-menu__item&quot;&gt;&lt;a href=&quot;#&quot;&gt;Item&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+        &lt;li class=&quot;horizontal-menu__item&quot;&gt;&lt;a href=&quot;#&quot;&gt;Item&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+        &lt;li class=&quot;horizontal-menu__item horizontal-menu__item--current&quot;&gt;&lt;a href=&quot;#&quot;&gt;Item&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+        &lt;li class=&quot;horizontal-menu__item&quot;&gt;&lt;a href=&quot;#&quot;&gt;Item&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+    &lt;&#x2F;ul&gt;
+&lt;&#x2F;nav&gt;</code></pre>
+    </section>
+    <section>
+        <h1 class="h2">Vertical Menu</h1>
+        <div class="example" style="max-width: 300px;">
+            <nav class="vertical-menu">
+                <h2 class="h4 vertical-menu__title">Title</h2>
+                <ul class="vertical-menu__list">
+                    <li class="vertical-menu__item"><a href="#">Item</a></li>
+                    <li class="vertical-menu__item vertical-menu__item--current"><a href="#">Item</a></li>
+                    <li class="vertical-menu__item"><a href="#">Item</a></li>
+                    <li class="vertical-menu__item"><a href="#">Item</a></li>
+                </ul>
+            </nav>
+        </div>
+        <pre><code class="html">&lt;nav class=&quot;horizontal-menu&quot;&gt;
+    &lt;ul class=&quot;horizontal-menu__list horizontal-menu__list--left&quot;&gt;
+        &lt;li class=&quot;horizontal-menu__item&quot;&gt;&lt;a href=&quot;#&quot;&gt;Item&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+        &lt;li class=&quot;horizontal-menu__item&quot;&gt;&lt;a href=&quot;#&quot;&gt;Item&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+        &lt;li class=&quot;horizontal-menu__item horizontal-menu__item--current&quot;&gt;&lt;a href=&quot;#&quot;&gt;Item&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+        &lt;li class=&quot;horizontal-menu__item&quot;&gt;&lt;a href=&quot;#&quot;&gt;Item&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+    &lt;&#x2F;ul&gt;
+&lt;&#x2F;nav&gt;</code></pre>
+    </section>
+    <section>
+        <h1 class="h2">Pagination</h1>
+        <div class="example">
+            <div class="pagination">
+                <span class="pagination__item pagination__item_prev pagination__item--disable">Prev</span>
+                <span class="pagination__item pagination__item_num"><a href="#">1</a></span>
+                <span class="pagination__item pagination__item_num"><a href="#">2</a></span>
+                <span class="pagination__item pagination__item_num pagination__item--current">3</span>
+                <span class="pagination__item pagination__item_num"><a href="#">4</a></span>
+                <span class="pagination__item pagination__item_num"><a href="#">5</a></span>
+                <span class="pagination__item pagination__item_next"><a href="#">Next</a></span>
+            </div>
+        </div>
+        <pre><code class="html">&lt;div class=&quot;pagination&quot;&gt;
+    &lt;span class=&quot;pagination__item pagination__item_prev pagination__item--disable&quot;&gt;Prev&lt;&#x2F;span&gt;
+    &lt;span class=&quot;pagination__item pagination__item_num&quot;&gt;&lt;a href=&quot;#&quot;&gt;1&lt;&#x2F;a&gt;&lt;&#x2F;span&gt;
+    &lt;span class=&quot;pagination__item pagination__item_num&quot;&gt;&lt;a href=&quot;#&quot;&gt;2&lt;&#x2F;a&gt;&lt;&#x2F;span&gt;
+    &lt;span class=&quot;pagination__item pagination__item_num pagination__item--current&quot;&gt;3&lt;&#x2F;span&gt;
+    &lt;span class=&quot;pagination__item pagination__item_num&quot;&gt;&lt;a href=&quot;#&quot;&gt;4&lt;&#x2F;a&gt;&lt;&#x2F;span&gt;
+    &lt;span class=&quot;pagination__item pagination__item_num&quot;&gt;&lt;a href=&quot;#&quot;&gt;5&lt;&#x2F;a&gt;&lt;&#x2F;span&gt;
+    &lt;span class=&quot;pagination__item pagination__item_next&quot;&gt;&lt;a href=&quot;#&quot;&gt;Next&lt;&#x2F;a&gt;&lt;&#x2F;span&gt;
+&lt;&#x2F;div&gt;</code></pre>
+    </section>
+    <section>
+        <h1 class="h2">Breadcrumbs</h1>
+        <div class="example">
+            <div class="breadcrumbs">
+                <span class="breadcrumbs__item"><a href="#">Home</a></span>
+                <span class="breadcrumbs__item"><a href="#">Name</a></span>
+                <span class="breadcrumbs__item"><a href="#">Name 2</a></span>
+                <span class="breadcrumbs__item breadcrumbs__item--current">This is a entry.</span>
+            </div>
+        </div>
+        <pre><code class="html">&lt;div class=&quot;breadcrumbs&quot;&gt;
+    &lt;span class=&quot;breadcrumbs__item&quot;&gt;&lt;a href=&quot;#&quot;&gt;Home&lt;&#x2F;a&gt;&lt;&#x2F;span&gt;
+    &lt;span class=&quot;breadcrumbs__item&quot;&gt;&lt;a href=&quot;#&quot;&gt;Name&lt;&#x2F;a&gt;&lt;&#x2F;span&gt;
+    &lt;span class=&quot;breadcrumbs__item&quot;&gt;&lt;a href=&quot;#&quot;&gt;Name 2&lt;&#x2F;a&gt;&lt;&#x2F;span&gt;
+    &lt;span class=&quot;breadcrumbs__item breadcrumbs__item--current&quot;&gt;This is a entry.&lt;&#x2F;span&gt;
+&lt;&#x2F;div&gt;</code></pre>
+    </section>
+    <section>
+        <h1 class="h2">Accordion</h1>
+        <div class="example">
+            <div class="accordion" aria-expanded="false">
+                <div class="accordion__header accordion__header--withicon-arrow">
+                    <button class="accordion__button"></button>
+                    <h5 class="h5 accordion__title">Hello World</h5>
+                </div>
+                <div class="accordion__content">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                </div>
+            </div>
+        </div>
+        <pre><code class="html">&lt;div class=&quot;accordion&quot; aria-expanded=&quot;false&quot;&gt;
+    &lt;div class=&quot;accordion__header accordion__header--withicon-arrow&quot;&gt;
+        &lt;button class=&quot;accordion__button&quot;&gt;&lt;&#x2F;button&gt;
+        &lt;h5 class=&quot;h5 accordion__title&quot;&gt;Hello World&lt;&#x2F;h5&gt;
+    &lt;&#x2F;div&gt;
+    &lt;div class=&quot;accordion__content&quot;&gt;
+        &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.&lt;&#x2F;p&gt;
+    &lt;&#x2F;div&gt;
+&lt;&#x2F;div&gt;</code></pre>
+    </section>
+    <section>
+        <h1 class="h2">Card</h1>
+        <div class="example">
+            <article class="card">
+                <header class="card__header">
+                    <h5 class="nomargin">お知らせ</h5>
+                    <span class="card__header_right">MORE</span>
+                </header>
+                <div class="card__content">
+                    <p>Lorem ipsum dolor sit amet, fringilla mauris mauris viverra viverra. Sed quia laoreet suspendisse ut libero, euismod tristique adipiscing, et sit habitasse vitae ipsum ultrices. Metus rutrum, nullam integer elit eget ac leo, suspendisse quis sit vestibulum, sed vestibulum, a dolor dolor est ac. </p>
+                </div>
+                <footer class="card__footer">
+                    <button class="button">OK!</button>
+                </footer>
+            </article>
+        </div>
+        <pre><code class="html">&lt;article class=&quot;card&quot;&gt;
+    &lt;header class=&quot;card__header&quot;&gt;
+        &lt;h5 class=&quot;nomargin&quot;&gt;お知らせ&lt;&#x2F;h5&gt;
+        &lt;span class=&quot;card__header_right&quot;&gt;MORE&lt;&#x2F;span&gt;
+    &lt;&#x2F;header&gt;
+    &lt;div class=&quot;card__content&quot;&gt;
+        &lt;p&gt;Lorem ipsum... &lt;&#x2F;p&gt;
+    &lt;&#x2F;div&gt;
+    &lt;footer class=&quot;card__footer&quot;&gt;
+        &lt;button class=&quot;button&quot;&gt;OK!&lt;&#x2F;button&gt;
+    &lt;&#x2F;footer&gt;
+&lt;&#x2F;article&gt;</code></pre>
+    </section>
+    <section>
+        <h1 class="h2">Triangle</h1>
+        <div class="example" style="position: relative; height: 100px;">
+            <div class="triangle">
+               <div class="triangle__content">NEW!</div>
+            </div>
+        </div>
+        <pre><code class="html">&lt;div class=&quot;triangle&quot;&gt;
+    &lt;div class=&quot;triangle__content&quot;&gt;NEW!&lt;&#x2F;div&gt;
+&lt;&#x2F;div&gt;</code></pre>
+    </section>
+</article>
+       </div>
+   </div>
+</main>
+    <footer class="footer">
+    <div class="container section">
+        <p><a href="/">English</a> / <a href="/ja">日本語</a></p>
+        <p><small>Copyright 2017 holy0201.<br>PonDeStyle is licensed <a rel="license" href="https://github.com/PonDeStyle/PonDeStyle/blob/master/LICENSE">MIT</a>. This document is <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">CC-BY 4.0</a></small></p>
+   </div>
+</footer>
+    
+    </body>
+</html>

@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="utf-8">
+    <title>Columns - PonDeStyle</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="canonical" href="http://pondestyle.github.io/docs/columns.html">
+    <link rel="stylesheet" href="/dist/style.css">
+    <link rel="icon" href="/dist/logo.png">
+    <meta name="description" content="A lightweight CSS Framework">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Columns">
+    <meta property="og:url" content="http://pondestyle.github.io/docs/columns.html">
+    <meta property="og:site_name" content="PonDeStyle">
+    <meta property="og:description" content="A lightweight CSS Framework">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+</head>
+    <body class="docs">
+    <script src="https://use.typekit.net/lak3cis.js"></script>
+    <script>try{Typekit.load({ async: true });}catch(e){}</script>
+    <header class="header">
+   <div class="C container section section--only_beside section--only_pc">
+       <div class="header__left">
+           <div class="header__logo header__logo--colored">
+               <a href="/">PonDeStyle</a>
+           </div>
+       </div>
+       <div class="header__right">
+           <nav class="global-nav hide-only-mobile">
+               <a href="/docs/" class="global-nav__link">Document</a>
+               <a href="https://github.com/PonDeStyle/PonDeStyle" class="global-nav__link">GitHub</a>
+           </nav>
+       </div>
+   </div>
+</header>
+    <div class="hero hero--small hero--gray">
+    <div class="container">
+        <h1 class="section">Document</h1>
+    </div>
+</div>
+<div class="fullwidth-bar"><p>This site is google translate yet.</p></div>
+<main class="container docs">
+   <div class="C bezel">
+       <aside class="c c--fixed docs__sidebar">
+           <div class="section">
+               <nav class="vertical-menu docsmenu">
+                   <h1 class="h5 vertical-menu__title">Introduction</h1>
+                   <ul class="vertival-menu__list">
+                       <li class="vertical-menu__item"><a href="/docs">Get started</a></li>
+                       <li class="vertical-menu__item"><a href="browsers.html">Support browsers</a></li>
+                       <li class="vertical-menu__item"><a href="quickstart.html">Quickstart</a></li>
+                   </ul>
+                   <h1 class="h5 vertical-menu__title">Documents</h1>
+                   <ul class="vertival-menu__list">
+                       <li class="vertical-menu__item"><a href="columns.html">Columns</a></li>
+                       <li class="vertical-menu__item"><a href="languages.html">Languages</a></li>
+                       <li class="vertical-menu__item"><a href="forms.html">Form</a></li>
+                       <li class="vertical-menu__item"><a href="typography.html">Typography</a></li>
+                       <li class="vertical-menu__item"><a href="components.html">Components</a></li>
+                       <li class="vertical-menu__item"><a href="variables.html">Custom properties</a></li>
+                       <li class="vertical-menu__item"><a href="apply-rule.html">Apply rules</a></li>
+                   </ul>
+               </nav>
+           </div>
+       </aside>
+       <div class="c docs__article">
+           <article class="section">
+    <h1>Columns</h1>
+    <p>Information of columns system.</p>
+    <section>
+        <h1 class="h2">Overview</h1>
+        <p>PonDeStyle is not have fixed grid like other major frameworks. We adopt a simple and flexible layout system using CSS Flexible Box Layout.  @apply rules can build more customizable layout.</p>
+    </section>
+    <section>
+        <h1 class="h2">Basic usage</h1>
+        <p>マルチカラムレイアウトを構築するには、<code>.columns</code> もしくは <code>.C</code> クラスを持つFlexコンテナと、<code>.columns__item</code> もしくは <code>.c</code> クラスを持つFlexアイテムを使用します。</p>
+        <div class="example">
+            <div class="C negativemargin text-center">
+                <div class="c gridtest">
+                    <div class="section">1</div>
+                </div>
+                <div class="c gridtest">
+                    <div class="section">2</div>
+                </div>
+                <div class="c gridtest">
+                    <div class="section">3</div>
+                </div>
+            </div>
+        </div>
+        <pre><code class="html">&lt;div class="C"&gt;
+    &lt;div class="c"&gt;&lt;/div&gt;
+    &lt;div class="c"&gt;&lt;/div&gt;
+    &lt;div class="c"&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+        <p>あるFlexアイテムに、他のアイテムの2倍の幅を持たせたい場合は、 <code>.columns__item--2x</code> クラスを追加します。</p>
+        <div class="example">
+            <div class="C negativemargin text-center">
+                <div class="c gridtest">
+                    <div class="section">1</div>
+                </div>
+                <div class="c c--2x gridtest">
+                    <div class="section">2</div>
+                </div>
+                <div class="c gridtest">
+                    <div class="section">3</div>
+                </div>
+            </div>
+        </div>
+        <pre><code class="html">&lt;div class="C"&gt;
+    &lt;div class="c"&gt;&lt;/div&gt;
+    &lt;div class="c c--2x"&gt;&lt;/div&gt;
+    &lt;div class="c"&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+        <p>ハイフンが2個ついた modifier を持つクラスは、それを持たないクラスの後に続けて記述します。これは、 <code>.c</code> クラスの <code>2x</code> オプションが true であることを示します。</p>
+        <p>通常、タブレット未満の画面幅（768px未満）ではカラムは折り返します。タブレット未満でも横並びを維持するには、Flexコンテナに <code>.columns--mobile</code> クラスを追加します。</p>
+        <p>アイテムを折り返すには、Flexコンテナに <code>.columns--wrapped</code> クラスを追加します。</p>
+    </section>
+    <section>
+        <h1 class="h2">応用的な使い方</h1>
+        <p>Apply ルールを用いて独自のマルチカラムクラスを定義する方法を説明します。</p>
+        <p>まず最初に、Flexコンテナに <code>--columns-initial</code> を、Flexアイテムに <code>--columns-item-initial</code> を適用します。</p>
+        <pre><code class="css">.mycolumn {
+    @apply --columns-initial;
+
+    &__item-1 {
+        @apply --columns-item-initial;
+    }
+
+    &__item-2 {
+        @apply --columns-item-initial;
+    }
+}</code></pre>
+        <p>次に、それぞれの画面幅でのアイテムの幅を指定します。たとえば上記の例で、タブレット以上デスクトップ未満の場合に 1:2、デスクトップ以上の場合に 2:3 の比率でアイテムを表示したい場合は、以下のようにapplyルールを適用します。</p>
+        <pre><code class="css">.mycolumn {
+    @apply --columns-initial;
+
+    &__item-1 {
+        @apply --columns-item-initial;
+        @apply --columns-item-1x-tablet;
+        @apply --columns-item-2x-desktop;
+    }
+
+    &__item-2 {
+        @apply --columns-item-initial;
+        @apply --columns-item-2x-tablet;
+        @apply --columns-item-3x-desktop;
+    }
+}</code></pre>
+        <p>モバイル幅でも横並びを維持する場合は、以下のようにします。</p>
+        <pre><code class="css">.mycolumn {
+    @apply --columns-initial;
+    @apply --columns-keep-mobile;
+
+    &__item-1 {
+        @apply --columns-item-initial;
+        @apply --columns-item-3x-keep-mobile;
+        @apply --columns-item-2x-tablet;
+        @apply --columns-item-1x-desktop;
+    }
+
+    &__item-2 {
+        @apply --columns-item-initial;
+        @apply --columns-item-1x-keep-mobile;
+        @apply --columns-item-3x-tablet;
+        @apply --columns-item-1x-desktop;
+    }
+}</code></pre>
+        <p>以下は、複数のアイテムを1行につき、モバイル幅で1つ、タブレット幅で2つ、デスクトップ以上で3つ表示する例です。</p>
+        <pre><code class="css">.anothercolumn {
+    @apply --columns-initial;
+    @apply --columns-wrapped;
+
+    &__item {
+        @apply --columns-item-initial;
+        @apply --columns-item-half-tablet;
+        @apply --columns-item-third-desktop;
+    }
+}</code></pre>
+
+    </section>
+    <section>
+        <h1 class="h2">Applyルールリファレンス</h1>
+        <section>
+            <h1 class="h3">Flexコンテナ</h1>
+            <table>
+                <tr>
+                    <th>Applyルール</th>
+                    <th>説明</th>
+                </tr>
+                <tr>
+                    <td>--columns-initial</td>
+                    <td>Flexコンテナを定義します。</td>
+                </tr>
+                <tr>
+                    <td>--columns-keep-mobile</td>
+                    <td>モバイル幅でも折り返さずカラムを維持します。</td>
+                </tr>
+                <tr>
+                    <td>--columns-column</td>
+                    <td>カラムを上下に配置します。</td>
+                </tr>
+                <tr>
+                    <td>--columns-wrapped</td>
+                    <td>はみ出したアイテムを次の行に折り返します。</td>
+                </tr>
+            </table>
+        </section>
+        <section>
+            <h1 class="h3">Flexアイテム</h1>
+            <table>
+                <tr>
+                    <th>Applyルール</th>
+                    <th>説明</th>
+                </tr>
+                <tr>
+                    <td>--columns-item-initial</td>
+                    <td>Flexアイテムを定義します。</td>
+                </tr>
+                <tr>
+                    <td>--columns-item-'アイテムの幅'-'画面幅'</td>
+                    <td>それぞれの画面幅での、アイテムの幅を指定します。</td>
+                </tr>
+            </table>
+            <section>
+                <h1 class="h4">アイテムの幅の一覧</h1>
+                <table>
+                    <tr>
+                        <th>アイテムの幅</th>
+                        <th>説明</th>
+                    </tr>
+                    <tr>
+                        <td>1x</td>
+                        <td>他のアイテムの1倍の幅を持とうとします。</td>
+                    </tr>
+                    <tr>
+                        <td>2x</td>
+                        <td>他のアイテムの2倍の幅を持とうとします。</td>
+                    </tr>
+                    <tr>
+                        <td>3x</td>
+                        <td>他のアイテムの3倍の幅を持とうとします。</td>
+                    </tr>
+                    <tr>
+                        <td>4x</td>
+                        <td>他のアイテムの4倍の幅を持とうとします。</td>
+                    </tr>
+                    <tr>
+                        <td>half</td>
+                        <td>コンテナの半分の幅を持とうとします。</td>
+                    </tr>
+                    <tr>
+                        <td>third</td>
+                        <td>コンテナの3分の1の幅を持とうとします。</td>
+                    </tr>
+                    <tr>
+                        <td>quarter</td>
+                        <td>コンテナの4分の1の幅を持とうとします。</td>
+                    </tr>
+                </table>
+            </section>
+            <section>
+                <h1 class="h4">画面幅の一覧</h1>
+                <table>
+                    <tr>
+                        <th>画面幅</th>
+                        <th>説明</th>
+                    </tr>
+                    <tr>
+                        <td>keep-mobile</td>
+                        <td>768px 未満。ただし、Flexコンテナに keep-mobile が設定されている必要があります。</td>
+                    </tr>
+                    <tr>
+                        <td>tablet</td>
+                        <td>768px 以上 992px 未満</td>
+                    </tr>
+                    <tr>
+                        <td>desktop</td>
+                        <td>992px 以上 1200px 未満</td>
+                    </tr>
+                    <tr>
+                        <td>wide</td>
+                        <td>1200px 以上</td>
+                    </tr>
+                </table>
+            </section>
+        </section>
+    </section>
+</article>
+       </div>
+   </div>
+</main>
+    <footer class="footer">
+    <div class="container section">
+        <p><a href="/">English</a> / <a href="/ja">日本語</a></p>
+        <p><small>Copyright 2017 holy0201.<br>PonDeStyle is licensed <a rel="license" href="https://github.com/PonDeStyle/PonDeStyle/blob/master/LICENSE">MIT</a>. This document is <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">CC-BY 4.0</a></small></p>
+   </div>
+</footer>
+    
+    </body>
+</html>

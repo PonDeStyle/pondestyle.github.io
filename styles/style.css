@@ -1,0 +1,422 @@
+@import 'PonDeStyle';
+
+body {
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+}
+
+.header {
+    &__logo {
+        font-family: 'filson-soft', 'Avenir Next', 'Segoe UI', 'Hiragino Sans', 'Yu Gothic', 'Meiryo', sans-serif;
+        min-height: 4.25rem;
+    }
+}
+
+.index .header {
+    box-shadow: none;
+    position: absolute;
+    color: #fff;
+    
+    & .global-nav__link {
+        color: #fff;
+        text-decoration: none;
+    }
+}
+
+h1 {
+    font-family: 'filson-soft', 'Avenir Next', 'Segoe UI', 'Hiragino Sans', 'Yu Gothic', 'Meiryo', sans-serif;
+}
+
+.header .global-nav__link:hover {
+    background: rgba(255, 255, 255, .1);
+}
+
+.decolink--skeleton {
+    background: transparent;
+    border: 1px #fff solid;
+}
+
+.lp-hero {
+    @apply --hero-initial;
+    @apply --hero-size-normal;
+    @apply --hero-size-large-tablet;
+    
+    background-image: url(path-nami.svg), linear-gradient(180deg, #3198FF, #48CEFF);
+    background-repeat: no-repeat;
+    background-position: center 440px, 0;
+    background-size: 105%;
+    padding-top: calc(3rem + 4.25rem);
+
+    @media (--tablet) {
+        padding-top: calc(8rem + 4.25rem);
+    }
+    
+    &__container {
+        @apply --container;
+        @apply --text-center;
+        @apply --text-left-tablet;
+    }
+    
+    &__heading {
+        padding: 0 1rem 6rem 1rem;
+        font-family: 'filson-soft';
+        color: #fff;
+
+        & h1 {
+            font-size: 30px;
+            font-weight: 200;
+        }
+
+        & h2 {
+            @apply --text-center;
+            @apply --text-right-tablet;
+            
+            font-size: 24px;
+            font-weight: 200;
+        }
+
+        @media (--tablet) {
+            padding: 0 6.25rem 18.75rem 6.25rem;
+
+            & h1 {
+                font-size: 50px;
+                font-weight: 200;
+            }
+
+            & h2 {
+                font-size: 40px;
+                font-weight: 200;
+                text-align: right;
+            }
+        }
+    }
+    
+    &__buttons {
+        padding: 0 1rem;
+
+        @media (--tablet) {
+            padding: 0 6.25rem;
+        }
+
+        & .decolink {
+            font-weight: 400;
+            vertical-align: middle;
+            white-space: nowrap;
+            margin-bottom: 1rem;
+        }
+    }
+}
+
+.lp-features {
+    @apply --bezel-initial;
+    @apply --bezel-large;
+    
+    &__container {
+        @apply --container;
+        @apply --columns-initial;
+        @apply --columns-wrapped;
+        @apply --text-center;
+        @apply --text-left-tablet;
+    }
+    
+    &__item {
+        @apply --columns-item-initial;
+        @apply --columns-item-half-tablet;
+        
+        &:nth-child(-n + 2) {
+            @media(--tablet) {
+                margin-bottom: 2rem;
+            }
+        }
+    }
+    
+    &__section {
+        @apply --section;
+        @apply --display-flex;
+        
+        flex-direction: column;
+
+        @media (--tablet) {
+            flex-direction: row;
+        }
+        
+        & img {
+            height: 100%;
+        }
+    }
+    
+    &__icon {
+        flex-shrink: 0;
+        
+        & > svg {
+            width: 108px;
+            height: 108px;
+        }
+    }
+    
+    &__content {
+        @media (--tablet) {
+            margin-left: 1.75rem;
+        }
+    }
+}
+
+.lp-flexbox {
+    @apply --bezel-initial;
+    @apply --bezel-large;
+    
+    background-color: #F5F8F8;
+    
+    &__content {
+        @apply --columns-initial;
+    }
+    
+    &__item {
+        @apply --columns-item-initial;
+    }
+}
+
+.lp-components {
+    @apply --bezel-initial;
+    @apply --bezel-normal;
+    
+    &__container {
+        @apply --container;
+        @apply --section;
+    }
+    
+    &__content {
+        @apply --text-center;
+    }
+    
+    &__example {
+        padding: 3rem 0;
+
+        @media (--tablet) {
+            padding: 3rem 4rem;
+        }
+    }
+    
+    &__exparts:not(:last-child) {
+        margin-bottom: 1.875rem;
+    }
+}
+
+.lp-postcss {
+    @apply --bezel-initial;
+    @apply --bezel-large;
+    
+    background-image: linear-gradient(45deg, #DD723A, #14A2BC);
+    color: #fff;
+    
+    &__container {
+        @apply --container;
+        @apply --columns-initial;
+    }
+    
+    &__item {
+        @apply --columns-item-initial;
+    }
+
+    &__code {
+        @apply --section;
+        
+        background: transparent;
+
+        & pre {
+            background: inherit;
+            border: 3px solid #fff;
+        }
+    }
+    
+    &__content {
+        @apply --section;
+    }
+}
+
+.lp-getting {
+    @apply --bezel-initial;
+    @apply --bezel-normal;
+    @apply --text-center;
+    
+    &__container {
+        @apply --container;
+        @apply --section;
+    }
+    
+    &__heading {
+        margin-bottom: 3.125rem;
+    }
+}
+
+.icon-postcss {
+    fill: #DD3A0A;
+}
+
+.icon-cssnext {
+    fill: #5478BB;
+}
+
+.icon-easily {
+    fill: #0063D6;
+}
+
+.icon-lightweight {
+    fill: #F47878;
+}
+
+.nomargin {
+    margin: 0;
+}
+
+.docs__sidebar .vertical-menu {
+    font-size: 17px;
+    
+    &__title {
+        color: var(--primary-color);
+        position: relative;
+        padding-bottom: 10px;
+        
+        &::after {
+            content: '';
+            display: block;
+            bottom: 0;
+            position: absolute;
+            height: 2px;
+            width: 22px;
+            background: var(--primary-color);
+        }
+    }
+    
+    & ul {
+        padding-left: 0;
+        margin-bottom: 2rem;
+    }
+    
+    &__list {
+        padding-left: 0;
+        margin-bottom: 2rem;
+    }
+    
+    & a {
+        padding: 7px 0;
+        line-height: 1.5;
+        text-decoration: none;
+        color: var(--text-color-dark);
+        display: inline-block;
+    }
+}
+
+.docs {
+    &__article {
+        & section {
+            margin-top: 2.5rem;
+        }
+        
+        @media (--tablet) {
+            font-size: 1.0625rem;
+        }
+        
+        & pre {
+            margin-top: 1rem;
+            margin-bottom: 2rem;
+            overflow-x: auto;
+        }
+    }
+}
+
+.example {
+    & h1 {
+        font-size: 2.625rem;
+        font-family: 'Avenir Next', 'Segoe UI', sans-serif;
+    }
+}
+
+.decolink--black {
+    background: var(--black-color);
+    
+    &:hover {
+        background: var(--dark-gray-color);
+    }
+}
+
+.gridtest {
+    background: var(--primary-color-gradient);
+    border-radius: var(--border-radius);
+    color: var(--white-color);
+    margin: 1rem;
+}
+
+.footer {
+    & a {
+        color: #fff;
+    }
+}
+
+.hljs {
+    background: transparent !important;
+    color: #464f55;
+    display: block;
+    overflow-x: auto;
+    padding: 0 !important;
+}
+
+.hljs-tag,
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-literal,
+.hljs-strong,
+.hljs-name {
+    color: #e92a73;
+}
+
+.hljs-code {
+    color: #464f55;
+}
+
+.hljs-class .hljs-title {
+    color: white;
+}
+
+.hljs-attribute,
+.hljs-symbol,
+.hljs-regexp,
+.hljs-link {
+    color: #bf79db;
+}
+
+.hljs-string,
+.hljs-bullet,
+.hljs-subst,
+.hljs-title,
+.hljs-section,
+.hljs-emphasis,
+.hljs-type,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-selector-attr,
+.hljs-selector-pseudo,
+.hljs-addition,
+.hljs-variable,
+.hljs-template-tag,
+.hljs-template-variable {
+    color: #3086e6;
+}
+
+.hljs-comment,
+.hljs-quote,
+.hljs-deletion,
+.hljs-meta {
+    color: hsl(205, 27%, 77%);
+}
+
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-literal,
+.hljs-doctag,
+.hljs-title,
+.hljs-section,
+.hljs-type,
+.hljs-selector-id {
+    font-weight: bold;
+}
