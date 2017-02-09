@@ -107,6 +107,11 @@ h1 {
     }
 }
 
+#getStartedButton {
+    font-family: 'filson-soft', 'Avenir Next', 'Segoe UI', 'Hiragino Sans', 'Yu Gothic', 'Meiryo', sans-serif;
+    border-width: 2px;
+}
+
 .lp-features {
     @apply --bezel-initial;
     @apply --bezel-large;
@@ -173,6 +178,12 @@ h1 {
     
     &__item {
         @apply --columns-item-initial;
+    }
+    
+    & code {
+        @media (--tablet) {
+            font-size: 1.4rem;
+        }
     }
 }
 

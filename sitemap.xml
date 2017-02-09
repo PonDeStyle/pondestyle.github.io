@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://pondestyle.github.io/ja/index.html</loc>
+    
+    <lastmod>2017-02-09T15:22:19.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://pondestyle.github.io/index.html</loc>
+    
+    <lastmod>2017-02-09T15:22:01.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://pondestyle.github.io/ja/docs/components.html</loc>
     
     <lastmod>2017-02-09T03:35:25.000Z</lastmod>
@@ -33,20 +47,6 @@
     <loc>https://pondestyle.github.io/ja/docs/browsers.html</loc>
     
     <lastmod>2017-02-04T03:31:55.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://pondestyle.github.io/index.html</loc>
-    
-    <lastmod>2017-02-03T04:19:55.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://pondestyle.github.io/ja/index.html</loc>
-    
-    <lastmod>2017-02-03T02:24:36.000Z</lastmod>
     
   </url>
   
